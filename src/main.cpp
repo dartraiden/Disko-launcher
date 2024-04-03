@@ -97,8 +97,9 @@ int main() {
 		system("start .\\vcurrent\\Disko.exe -disableUpdate");
 	}
 	else {
-		// Если файл "Disko.exe" не найден, то выводим сообщение об ошибке
+		// Если файл "Disko.exe" не найден, то выводим сообщение об ошибке и завершаем работу
 		MessageBoxA(NULL, "No Disk-O executable was found. Place launcher to %LocalAppData%\\Mail.Ru\\Disk-O", "Error", MB_ICONERROR | MB_OK);
+		return 1;
 	}
 
 	// В бесконечном цикле каждые 5 секунд перебираем все окна и закрываем окно с определенным классом и заголовком
